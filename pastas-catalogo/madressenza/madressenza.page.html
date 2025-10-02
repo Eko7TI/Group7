@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/pastas-catalogo" class="voltar" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="logo-container">
+    <img src="assets/logomadressenza.png" class="logo" />
+  </div>
+  
+  <swiper-container [slidesPerView]="1" [spaceBetween]="10" navigation="false" class="mySwiper">
+    <ng-container *ngFor="let imagem of imagensCatalogo">
+      <swiper-slide>
+        <div class="zoom-container" (click)="onMouseClick($event)">
+          <ion-icon class="download-button" name="download-outline" (click)="confirmDownload($event, imagem)"></ion-icon>
+          <img [src]="imagem" alt="Imagem do catálogo" class="zoom-image" [ngClass]="{'zoomed': isZoomed}">
+        </div>
+      </swiper-slide>
+    </ng-container>
+  </swiper-container>
+</ion-content>

@@ -1,0 +1,422 @@
+// login.page.scss
+@import url(https://db.onlinewebfonts.com/c/1e5b7f8cdbcb1e579a6e53aaadaf0b67?family=Real+Head+Web+W03+Regular);
+@font-face {
+  font-family: "Real Head Web W03 Regular";
+  src: url("https://db.onlinewebfonts.com/t/1e5b7f8cdbcb1e579a6e53aaadaf0b67.eot");
+  src: url("https://db.onlinewebfonts.com/t/1e5b7f8cdbcb1e579a6e53aaadaf0b67.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/1e5b7f8cdbcb1e579a6e53aaadaf0b67.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/1e5b7f8cdbcb1e579a6e53aaadaf0b67.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/1e5b7f8cdbcb1e579a6e53aaadaf0b67.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/1e5b7f8cdbcb1e579a6e53aaadaf0b67.svg#Real Head Web W03 Regular")format("svg");
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; /* Torna a página inteira responsiva à altura da tela */
+}
+
+// Barra de cabeçalho
+ion-header {
+  ion-toolbar {
+    --background: #7fc4fd;
+    --color: #ffffff;
+    border-radius: 2px;
+  }
+}
+
+.title {
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* Define a fonte do título */
+  font-size: 23px; /* Define o tamanho do texto do título */
+  font-weight: bold; /* Define o peso da fonte do título */
+}
+
+// Container do logotipo
+
+
+// Container do formulário de login
+
+
+// Estilo para os itens de entrada
+ion-input {
+  border: 2px solid #a8a8a8; // Cor mais escura da borda
+  border-radius: 20px; // Arredonda mais as bordas
+  position: relative; // Define a posição relativa para que possamos posicionar os rótulos dentro dos inputs
+  margin: 0 auto; 
+}
+
+// Esconde os rótulos quando os inputs estão focados
+.usuario.focused,
+.senha.focused {
+  display: none;
+}
+
+// Estilo para o rótulo "Usuário"
+.usuario,
+.senha {
+  position: absolute;
+  left: 50%; // Posiciona o rótulo no meio do input
+  transform: translateX(-60%); // Centraliza o rótulo horizontalmente
+  color: #333;
+  z-index: 999;
+  font-family: "Real Head Web W03 Regular", bold;
+  pointer-events: none; // Garante que o rótulo não seja clicável
+}
+// Estilo para os rótulos dos itens de entrada
+.input-item ion-label {
+  color: #333 !important; // Defina a cor do texto do rótulo
+  font-family: "Real Head Web W03 Regular" bold;
+}
+
+// Estilo para as entradas dos itens de entrada
+.input-item ion-input {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --placeholder-color: #999;
+  font-size: 16px;
+  color: #333; // Cor do texto de entrada
+  font-family: "Real Head Web W03 Regular" bold;
+  
+  
+}
+
+.input-item {
+  border: none; /* Remova a borda */
+  box-shadow: none !important; /* Remova a caixa de sombra */
+  /* Garanta que o fundo seja transparente */
+  --background: transparent;
+  --inner-background: transparent;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+  margin-bottom: 3px; /* Adiciona margem entre os inputs */
+}
+.input-item:last-child {
+  margin-bottom: 0; /* Remove a margem do último input para evitar espaço extra */
+}
+
+
+.input-item ion-input {
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --placeholder-color: #999;
+  font-size: 16px;
+  color: #3b3a3a; /* Cor do texto dentro do input (branco) */
+  border-radius: 20px; // Mantenha as bordas arredondadas
+  border-color: transparent; // Garanta que a borda interna seja transparente
+  background-color: white; // Defina a cor de fundo interna como branca
+}
+
+// Estilo para o botão de login
+.entrar{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-button {
+  border-radius: 20px;
+  background-color: #7fc4fd;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 20px 0; /* Adiciona margem apenas no topo e embaixo */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  width: 90%;
+  height: 40px;
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+  
+   /* Adiciona um espaçamento interno de 10px nas laterais */
+}
+
+// Efeito hover para o botão de login
+.login-button:hover {
+  transform: translateY(-3px);
+  font-family: "Real Head Web W03 Regular" bold;
+}
+
+// Estilo para o texto de "Esqueceu sua senha?"
+.forgot-password-text {
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "Real Head Web W03 Regular";
+}
+// Estilo para o link de redefinição de senha
+.reset-password-text {
+  color: #00b7ff;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Real Head Web W03 Regular" ;
+}
+
+// Efeito hover para o link de redefinição de senha
+.reset-password-text:hover {
+  color: #a9ffff;
+  font-size: 13px;
+}
+
+// Cor de fundo do conteúdo
+ion-content {
+  --background: #ffffff;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.logo {
+  width: 120px; /* Tamanho inicial do logotipo */
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.error-message-container {
+  display: flex;
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza verticalmente */
+  
+  /* Espaçamento abaixo da mensagem de erro */
+  width: 100%;
+  height: auto;
+  font-family: "Real Head Web W03 Regular" bold;
+}
+
+.error-message {
+  margin-bottom: 2px;
+  text-align: center;
+  /* Centraliza o texto */
+  background-color: #ffcccc;
+  /* Cor de fundo da mensagem de erro */
+  color: #ff0000;
+  /* Cor do texto da mensagem de erro */
+  padding: 10px 20px;
+  /* Espaçamento interno */
+  border-radius: 10px;
+  /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Sombra */
+  width: 90%;
+  height: auto;
+  font-family: "Real Head Web W03 Regular" bold;
+}
+
+
+
+/* Estilos para o botão de redirecionamento */
+/* Estilos para o botão de redirecionamento */
+/* Estilos para o botão de redirecionamento */
+.conhecaeko7{
+  
+  display: flex;
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.company-website-button {
+  background: #ffffff; /* Cor de fundo do botão (cinza claro) */
+  color: #2d53fd; /* Cor do texto doACont botão (azul) */
+  border-radius: 25px; /* Raio das bordas do botão */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 16px; /* Tamanho da fonte */
+  padding: 15px; /* Espaçamento interno do botão */
+  margin-top: 20px; /* Espaçamento superior do botão */
+  border: 2px solid transparent; /* Borda transparente inicial */
+  
+}
+
+.company-website-button:hover {
+  background: #bbbdc0; /* Cor de fundo do botão ao passar o mouse (cinza mais escuro) */
+  font-family: "Real Head Web W03 Regular" bold;
+}
+
+.cyberpunk-checkbox {
+  position: relative;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: transparent;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  vertical-align: middle; /* Adicionado para alinhar verticalmente */
+}
+
+.cyberpunk-checkbox:before {
+  content: "";
+  background-color: #ffffff;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cyberpunk-checkbox:checked:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cyberpunk-checkbox-label {
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.eye-icon {
+  color:#000;
+  position: absolute;
+  cursor: pointer;
+  top: 30%; /* Ajuste conforme necessário para a posição vertical desejada */
+  right: 30px; /* Ajuste conforme necessário para a posição horizontal desejada */
+  transform: translateY(-50%);
+  width: 20px;
+  z-index: 10; /* Garante que o ícone do olho esteja acima do input */
+}
+
+.cadastro{
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+/* Media query para ajustar a posição do ícone do olho em telas menores */
+
+.--{
+  color: white;
+  text-align: center;
+  margin-top: -6px;
+  margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+.div {
+  display: flex; /* Usa flexbox para centralização */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 120px; /* Define uma altura adequada */
+}
+
+.wrapper {
+  display: flex; /* Usa flexbox */
+  list-style: none;
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  gap: 10px; /* Espaçamento entre os ícones */
+  width: 100%; /* Faz com que a lista ocupe 100% da largura */
+  height: 100%; /* Faz com que a lista ocupe 100% da altura */
+  margin: 0; /* Remove margem */
+  padding: 0; /* Remove padding */
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  color: white; 
+}

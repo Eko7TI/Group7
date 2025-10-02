@@ -1,0 +1,102 @@
+button {
+    font-family: inherit;
+    font-size: 20px;
+    background: #212121;
+    color: white;
+    fill: rgb(155, 153, 153);
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background: #000;
+  }
+  
+  button:hover .svg-wrapper {
+    transform: scale(2.0);
+    transition: 0.5s linear;
+  }
+  
+  button:hover svg {
+    transform: translateX(2.4em) scale(1.1);
+    fill: #fff;
+  }
+  
+  button:hover span {
+    opacity: 0;
+    transition: 0.5s linear;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+
+  .submit-button {
+    font-family: inherit;
+    font-size: 20px;
+    background: #212121;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse as bordas do botão */
+  }
+  
+  .submit-button .svg-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .submit-button:hover .svg-wrapper-1 {
+    transform: translate(-150%, -50%); /* Mover o ícone existente para fora da tela */
+  }
+  
+  .submit-button:hover .svg-wrapper-2 {
+    transform: translate(50%, -50%); /* Mover o novo ícone para dentro do botão */
+  }
+  
+  .submit-button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .submit-button:hover span {
+    opacity: 0; /* Oculta o texto quando o botão for hover */
+  }
+  
+  .submit-button:active {
+    transform: scale(0.95);
+  }
+  
+  /* src/app/app.component.scss */
+

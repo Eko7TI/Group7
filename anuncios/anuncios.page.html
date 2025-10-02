@@ -1,0 +1,42 @@
+<!-- src/app/anuncios/anuncios.page.html -->
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-menu-button slot="start" class="menuzin"></ion-menu-button>
+    <ion-title class="title">Anúncios</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleBarraPesquisa()">
+        <ion-icon [name]="mostrarBarraPesquisa ? 'close' : 'search'"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <!-- Barra de pesquisa flutuante -->
+  <ion-toolbar *ngIf="mostrarBarraPesquisa" class="search-toolbar">
+    <ion-searchbar [(ngModel)]="termoPesquisa" (ionChange)="onPesquisaChange($event)"
+      [searchIcon]="'search'"  (ionCancel)="toggleBarraPesquisa()">
+    </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="content-wrapper">
+    <ion-list>
+      <ion-item *ngFor="let message of messages; let i = index" class="message-card">
+        <ion-card class="card">
+          <ion-card-header>
+            <div class="codigo">{{ message.codigo }}</div>
+            <img 
+              [src]="message.isVisible ? 'assets/olho-aberto.png' : 'assets/olho-fechado.png'" 
+              class="olho" 
+              (click)="toggleMessageVisibility(i)">
+              <ion-card-subtitle>{{ message.nome }} - {{ message.horario_pub | date: 'dd/MM/yyyy HH:mm:ss' }}</ion-card-subtitle>
+            <ion-card-title>{{ message.titulo }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content *ngIf="message.isVisible">
+            <p>{{ message.mensagem }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

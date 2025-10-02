@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" style="--color: #526286;"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Resetar Senha</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="resetForm" (ngSubmit)="resetPassword()">
+    <ion-item>
+      <ion-label position="floating">CNPJ</ion-label>
+      <ion-input formControlName="cnpj" (ionInput)="formatCNPJ($event)" required></ion-input>
+    </ion-item>
+    <ion-button expand="block" type="submit" class="ion-margin-top">Enviar Link de Reset</ion-button>
+  </form>
+</ion-content>

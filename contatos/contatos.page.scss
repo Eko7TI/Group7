@@ -1,0 +1,60 @@
+/* Estilos para o cabeçalho */
+ion-header ion-toolbar {
+    --background: #7fc4fd; /* Cor de fundo do cabeçalho */
+    --color: #ffffff; /* Cor do texto do cabeçalho */
+    text-align: center;
+  }
+  
+  .title{
+    margin-right: 45px;
+    text-align: center ;
+    font-family: 'Arial', sans-serif; /* Define a fonte do título */
+    font-size: 23px; /* Define o tamanho do texto do título */
+    font-weight: bold; /* Define o peso da fonte do título */
+  }
+  
+  .menu{
+    color:white;
+  }
+
+
+  /* src/app/app.component.scss */
+
+ion-menu {
+  --background: #ffffff; /* Fundo do menu */
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+  --ion-toolbar-background: #ffffff;
+  --ion-toolbar-color: #000000;
+  --ion-menu-background: #ffffff;
+  --ion-menu-text-color: #000000;
+}
+
+ion-content {
+  --background: #ffffff;
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+}
+
+ion-item {
+  --background: #ffffff;
+  --ion-item-background: #ffffff;
+  --ion-item-text-color: #000000;
+}
+
+/* Adicione estilos específicos para botões, inputs e outros elementos conforme necessário */
+ion-button, ion-input, ion-item {
+  --background: #ffffff;
+  --color: #000000;
+}
+
+ion-card {
+  --background: #ffffff;
+  --ion-card-background: #ffffff;
+  --ion-card-text-color: #000000;
+}
+
+ion-card-content {
+  --background: #ffffff;
+  --color: #000000;
+}

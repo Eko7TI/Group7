@@ -1,0 +1,80 @@
+<!--login.page.html-->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="title">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" fullscreen src="assets/login.jpg"
+  style="--background: url('assets/login.jpg') no-repeat center center / cover;">
+  <div class="background-overlay">
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Logo" class="logo">
+    </div>
+    <form class="login-form" (ngSubmit)="login()">
+      <ion-item lines="none" class="input-item">
+        <ion-label *ngIf="!isUsernameFocused && !username" class="usuario">Usuário</ion-label>
+        <ion-input [(ngModel)]="username" id="username" name="username" type="text" (ionFocus)="onUsernameFocus()"
+          (ionBlur)="onUsernameBlur()"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="input-item">
+        <ion-label *ngIf="!isPasswordFocused && !password" class="senha">Senha</ion-label>
+        <ion-input [(ngModel)]="password" id="password" name="password" type="{{ showPassword ? 'text' : 'password' }}"
+          (ionFocus)="onPasswordFocus()" (ionBlur)="onPasswordBlur()"></ion-input>
+        <ion-icon slot="end" name="{{ showPassword ? 'eye-off-outline' : 'eye-outline' }}"
+          (click)="toggleShowPassword()" class="eye-icon"></ion-icon>
+      </ion-item>
+      <label class="cyberpunk-checkbox-label">
+        <input type="checkbox" class="cyberpunk-checkbox" [(ngModel)]="rememberMe" name="rememberMe">
+        Lembrar Senha
+      </label>
+
+      <ion-text *ngIf="errorMessage" color="danger" class="error-message-container">
+        <p class="error-message">{{ errorMessage }}</p>
+      </ion-text>
+      <div class="entrar">
+        <button expand="block" class="login-button" type="submit">Entrar</button>
+      </div>
+    </form>
+    <div class="forgot-password-text">Esqueceu sua senha?
+      <span class="reset-password-text" (click)="redirectToReset()">Redefinir Senha</span>
+    </div>
+    <div class="--">
+      __
+    </div>
+    <div class="cadastro">
+      Conheça o GrupoEko'7
+    </div>
+    <div class="div">
+      <ul class="wrapper">
+        <li id="facebookIcon" class="icon facebook">
+          <span class="tooltip">Facebook</span>
+          <svg viewBox="0 0 320 512" height="1.2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+            </path>
+          </svg>
+        </li>
+        <li id="linkedinIcon" class="icon twitter">
+          <span class="tooltip">Linkedin</span>
+          <svg height="1.8em" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+            class="twitter">
+            <path
+              d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
+            </path>
+          </svg>
+        </li>
+        <li id="instagramIcon" class="icon instagram">
+          <span class="tooltip">Instagram</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" class="bi bi-instagram"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+            </path>
+          </svg>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ion-content>

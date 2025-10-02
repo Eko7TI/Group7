@@ -1,0 +1,105 @@
+ion-header ion-toolbar {
+  --background: #7fc4fd; /* Cor de fundo do cabeçalho */
+  --color: #ffffff; /* Cor do texto do cabeçalho */
+  text-align: center;
+}
+
+.title{
+  margin-right: 45px;
+  text-align: center ;
+  font-family: 'Arial', sans-serif; /* Define a fonte do título */
+  font-size: 23px; /* Define o tamanho do texto do título */
+  font-weight: bold; /* Define o peso da fonte do título */
+}
+
+
+ion-back-button{
+  color: #ffffff;
+}
+
+.logo {
+  width: 150px; /* Largura do logo */
+  height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+  display: block; /* Para centralizar o logo, se necessário */
+  margin-left: auto; /* Combinado com margin-right para centralizar o logo */
+  margin-right: auto; /* Combinado com margin-left para centralizar o logo */
+}
+
+
+
+.header-logo {
+  text-align: center; /* Centralizar o logotipo */
+  margin-top: 20px; /* Espaço no topo para o logotipo */
+}
+
+.support-card {
+  --background: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente para combinar com o login */
+  border-radius: 10px; /* Bordas arredondadas */
+  margin: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar o cartão */
+}
+
+ion-card-content {
+  text-align: justify;
+  text-justify: inter-word; /* Melhora o espaçamento entre as palavras */
+  hyphens: auto; /* Permite hifenização automática */
+  color: #333; /* Texto mais escuro para leitura */
+}
+
+ion-list ion-item {
+  background: rgba(255, 255, 255, 0.6); /* Itens semitransparentes para unidade visual */
+  border-radius: 20px; /* Bordas arredondadas */
+  margin: 8px 0; /* Espaçamento entre itens */
+}
+
+.support-link {
+  display: block;
+  text-align: center;
+  color: #3273dc; /* Link na cor do tema */
+  margin-top: 20px; /* Espaço antes do link */
+  text-decoration: none;
+}
+
+.icon{
+  color: #000000;
+}
+
+/* Media query para ajustes em telas menores */
+@media (max-width: 576px) {
+  .support-card {
+    margin: 15px;
+  }
+}
+
+
+
+ion-menu {
+  --background: #ffffff; /* Fundo do menu */
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+  --ion-toolbar-background: #ffffff;
+  --ion-toolbar-color: #000000;
+  --ion-menu-background: #ffffff;
+  --ion-menu-text-color: #000000;
+}
+
+ion-content {
+  --background: #ffffff;
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+  --ion-toolbar-background: #ffffff;
+  --ion-toolbar-color: #000000;
+}
+
+/* Adicione estilos específicos para botões, inputs e outros elementos conforme necessário */
+ion-button, ion-input, ion-item {
+  --background: #ffffff;
+  --color: #000000;
+}
+
+ion-item {
+  --background: #ffffff;
+  --ion-item-background: #ffffff;
+  --ion-item-text-color: #000000;
+  
+}

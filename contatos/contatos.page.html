@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" icon="arrow-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Contatos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="menuzin ion-padding" fullscreen>
+  <ion-list>
+    <ion-item *ngFor="let contato of contatos" class="contato-item">
+      <ion-label>
+        <h2>{{ contato.nome }}</h2>
+        <p>{{ contato.contato }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

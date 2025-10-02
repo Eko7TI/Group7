@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mapa</ion-title>
+    <ion-icon (click)="dismiss()" slot="end" name="close-outline" class="X"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="showMap" id="map">
+    <google-map [height]="'100%'" [width]="'100%'" [options]="mapOptions">
+      <map-marker [options]="markerOptions"></map-marker>
+    </google-map>
+  </div>
+  <div *ngIf="!showMap">Coordenadas inválidas</div>
+</ion-content>

@@ -1,0 +1,231 @@
+ion-header ion-toolbar {
+    --background: #7fc4fd; /* Cor de fundo do cabeçalho */
+    --color: #ffffff; /* Cor do texto do cabeçalho */
+    text-align: center;
+  }
+  
+
+.title{
+    margin-right: 45px;
+    text-align: center ;
+    font-family: 'Arial', sans-serif; /* Define a fonte do título */
+    font-size: 23px; /* Define o tamanho do texto do título */
+    font-weight: bold; /* Define o peso da fonte do título */
+  }
+  
+  .menu{
+    color:white;
+  }
+
+  .card{
+    background: #dadada;
+    .card-title{
+      font-weight: BOLDer;  
+      color: #6b6b6b;
+    }
+  }
+
+
+  .fone a {
+    display: inline-block;
+    color: rgb(73, 73, 73); /* Cor do texto */
+    background-color: transparent; /* Fundo transparente */
+    text-decoration: none; /* Remove sublinhado */
+    padding: 5px 10px; /* Espaçamento interno */
+    border: 2px solid rgb(90, 90, 90); /* Borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 2px 2px 5px rgba(83, 83, 83, 0.2); /* Sombra */
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s; /* Transições */
+}
+
+.fone a:hover {
+    background-color: rgba(10, 76, 138, 0.1); /* Fundo sutilmente colorido ao passar o mouse */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+}
+
+.fone a:active {
+    background-color: rgba(10, 76, 138, 0.2); /* Fundo um pouco mais escuro ao clicar */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra interna ao clicar  */
+}
+ 
+
+
+
+.horarioo{
+    font-weight: bolder;
+    color:#505050;
+    .horario{
+        font-size: 12px;
+        color: #525252;
+    }
+}
+.motoristaa{
+    font-weight: bolder;
+    color:#505050;
+    .motorista{
+        font-size: 12px;
+        color: #525252;
+    }
+}
+.veiculoo{
+    font-weight: bolder;
+    color:#505050;
+    .veiculo{
+        font-size: 12px;
+        color: #525252;
+    }
+}
+.placaa{
+    font-weight: bolder;
+    color:#505050;
+    .placa{
+        font-size: 12px;
+        color: #525252;
+  }
+}
+.obss{
+    font-weight: bolder;
+    color:#505050;
+    .obs{
+        font-size: 12px;
+        color: #525252;
+  }
+}
+
+
+  
+
+
+
+
+  button {
+    width: 100%;
+    position: relative;
+    padding: 15px 45px;
+    background: #58c0f0;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid #1b68be;
+    border-radius: 8px;
+    filter: drop-shadow(2px 2px 3px rgba(255, 255, 255, 0.2));
+  }
+  
+  button:hover {
+    border: 1px solid #f3b182;
+    background: linear-gradient(
+      85deg,
+      #a5def5,
+      #95d8f3,
+      #97dffc,
+      #7acef0,
+      #62c7f0
+    );
+    animation: wind 2s ease-in-out infinite;
+  }
+  
+  @keyframes wind {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    0% {
+      background-position: 50% 100%;
+    }
+  
+    0% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .icon-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    transform-origin: 0 0;
+    transform: rotate(10deg);
+    transition: all 0.5s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(18, 96, 214, 0.3));
+  }
+  
+  button:hover .icon-1 {
+    animation: slay-1 3s cubic-bezier(0.52, 0, 0.58, 1) infinite;
+    transform: rotate(10deg);
+  }
+  
+  @keyframes slay-1 {
+    0% {
+      transform: rotate(10deg);
+    }
+  
+    50% {
+      transform: rotate(-5deg);
+    }
+  
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+  
+  .icon-2 {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    width: 12px;
+    transform-origin: 50% 0;
+    transform: rotate(10deg);
+    transition: all 1s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(6, 87, 179, 0.5));
+  }
+  
+  button:hover .icon-2 {
+    animation: slay-2 3s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+    transform: rotate(0);
+  }
+  
+  @keyframes slay-2 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    50% {
+      transform: rotate(15deg);
+    }
+  
+    100% {
+      transform: rotate(0);
+    }
+  }
+  
+  .icon-3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    transform-origin: 50% 0;
+    transform: rotate(-5deg);
+    transition: all 1s ease-in-out;
+    filter: drop-shadow(2px 2px 3px rgba(23, 90, 216, 0.5));
+  }
+  
+  button:hover .icon-3 {
+    animation: slay-3 2s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+    transform: rotate(0);
+  }
+  
+  @keyframes slay-3 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    50% {
+      transform: rotate(-5deg);
+    }
+  
+    100% {
+      transform: rotate(0);
+    }
+  }
+  

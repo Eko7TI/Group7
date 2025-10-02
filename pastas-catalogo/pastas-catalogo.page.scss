@@ -1,0 +1,28 @@
+ion-header {
+    .toolbar {
+      --background: #7fc4fd;
+      --color: #ffffff;
+     
+    }
+    .title{
+        margin-right: 5vh;
+        text-align: center ;
+        font-family: 'Arial', sans-serif; /* Define a fonte do título */
+        font-size: 23px; /* Define o tamanho do texto do título */
+        font-weight: bold; /* Define o peso da fonte do título */
+        
+      }
+    
+    .menu{
+      color: #ffffff;
+    }
+
+    .custom-folder {
+      
+      --color: #ffffff;
+      --background-color: #ffffff;
+  }
+  
+  }
+
+  

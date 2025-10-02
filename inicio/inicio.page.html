@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-menu-button slot="start" autoHide="false" class="menu"></ion-menu-button>
+    <ion-title class="title">Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="menuzin ion-padding" fullscreen src="assets/login.jpg"
+  style="--background: url('assets/login.jpg') no-repeat center center / cover;">
+  <ion-buttons class="triangulo">
+    <ion-button (click)="toggleInformation()">
+      <img src="assets/flecha.png" alt="Triângulo para baixo" class="flecha"
+        [style.transform]="'rotate(' + (isRotated ? 180 : 0) + 'deg)'"
+        style="transition: transform 0.6s ease-in-out;" />
+    </ion-button>
+  </ion-buttons>
+
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-fab slot="fixed" vertical="top" horizontal="end" [edge]="true" class="trespontos">
+    <ion-fab-button class="botao-menu animated-button">
+      <ion-icon class="corbutton" name="ellipsis-vertical"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="bottom">
+      <ion-fab-button (click)="Logout()" class="custom-color">
+        <img src="assets/sair.png" class="icon1">
+      </ion-fab-button>
+      <!-- ESSA PARTE DO CÓDIGO SÃO OS CONTATOS, FICARÁ OCULTA
+      <ion-fab-button routerLink="/contatos" class="custom-color">
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-fab-button> -->
+      <ion-fab-button routerLink="/suporte" class="custom-color">
+        <img src="assets/suporte.png" class="icon3">
+    </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <!-- Verifica se userInfo existe e se showInfo é verdadeiro para mostrar as informações -->
+  <ion-card *ngIf="userInfo && showInfo" class="welcome-card">
+    <ion-card-header class="card-header">
+      <ion-card-title class="card-title">Bem-Vindo(a), {{ userInfo.nome }}!</ion-card-title>
+      <ion-card-subtitle class="card-subtitle platform-specific">CNPJ: {{ userInfo.cnpj }}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
+
+<!-- Aqui você pode mudar a versão do aplicativo para quando atualiza-lo-->
+<div class="versão">© 2025 GrupoEko'7</div>

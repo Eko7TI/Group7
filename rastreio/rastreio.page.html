@@ -1,0 +1,54 @@
+<!-- rastreio.page.html -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-menu-button slot="start" autoHide="false" class="menu"></ion-menu-button>
+    <ion-title class="title">Rastreamentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="previsao" class="card">
+    <ion-card-header>
+      <ion-card-title class="card-title">Previsão de saída</ion-card-title>
+      <p>Segue abaixo as datas de saída dos caminhões para a sua região.</p>
+    </ion-card-header>
+    <ion-card-content>
+      <div>Rota: {{ previsao.nome }}</div>
+      <p>Data de Previsão: {{ previsao.data_prev }}</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="!previsao" class="card">
+    <ion-card-header>
+      <ion-card-title class="card-title">Sem Previsão</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Não há entregas previstas</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="mapa" class="card">
+    <ion-card-header>
+      <ion-card-title class="card-title">Entrega em andamento</ion-card-title>
+      <p>Abaixo você pode verificar no mapa sua entrega em andamento.</p>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="motoristaa">Motorista:<p class="motorista">{{ mapa.motorista }}</p></div>
+      <div class="fone">
+        <a href="tel:{{ mapa.fone }}" style="color: rgb(71, 71, 71); text-decoration: dashed;">{{ mapa.fone }}</a>
+      </div>
+      <div class="veiculoo">Veículo:<p class="veiculo">{{ mapa.veiculo }}</p></div>
+      <div class="placaa">Placa:<p class="placa">{{ mapa.placa }}</p></div>
+      <div class="obss">Observação: <p class="obs">{{ mapa.obs }}</p></div>
+      <div class="horarioo">Inicio de viagem:<p class="horario"><p>{{ mapa.horario_formatado }}</p></div>
+      <button class="mapa" (click)="redirectToMap()">Mapa</button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="!mapa" class="card">
+    <ion-card-header>
+      <ion-card-title class="card-title">Sem entrega</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Não entregas no momento para você.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

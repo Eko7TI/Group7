@@ -1,0 +1,91 @@
+/*catologo.page.scss*/
+
+
+.voltar{
+  height: auto;
+  width: auto;
+  min-width: 44px;
+}
+
+.logo-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  height: auto; /* Definindo a altura pode ser opcional, dependendo do aspecto da sua imagem */
+}
+:host{
+  ion-content {
+    padding-top: env(safe-area-insert-top);
+    padding-bottom: env(safe-area-insert-bottom);
+  }
+--swiper-theme-color: #ffffff;
+}
+
+
+.zoom-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.zoom-image {
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+
+.zoomed {
+  transform-origin: center center;
+}
+
+.zoomed img {
+  cursor: grab;
+}
+
+.zoom-container {
+  position: relative;
+}
+
+.zoom-image {
+  display: block;
+  width: 100%;
+}
+
+.download-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #fff;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.div-button{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* eko7colchoes.page.scss */
+.pdf {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #7fc4fd;
+  background-color: #7fc4fd;
+  overflow: hidden;
+}
+
+.mySwiper {
+  height: calc(100% - env(safe-area-insert-top) - 80px);
+}
