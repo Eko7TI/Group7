@@ -1,0 +1,204 @@
+@import url(https://db.onlinewebfonts.com/c/1e5b7f8cdbcb1e579a6e53aaadaf0b67?family=Real+Head+Web+W03+Regular);
+@font-face {
+  font-family: "Real Head Web W03 Regular";
+  src: url("https://db.onlinewebfonts.com/t/1e5b7f8cdbcb1e579a6e53aaadaf0b67.eot");
+  src: url("https://db.onlinewebfonts.com/t/1e5b7f8cdbcb1e579a6e53aaadaf0b67.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/1e5b7f8cdbcb1e579a6e53aaadaf0b67.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/1e5b7f8cdbcb1e579a6e53aaadaf0b67.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/1e5b7f8cdbcb1e579a6e53aaadaf0b67.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/1e5b7f8cdbcb1e579a6e53aaadaf0b67.svg#Real Head Web W03 Regular")format("svg");
+}
+
+ion-menu ion-content {
+  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+}
+/* src/app/app.component.scss */
+
+ion-menu {
+  --background: #ffffff; /* Fundo do menu */
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+  --ion-toolbar-background: #ffffff;
+  --ion-toolbar-color: #000000;
+  --ion-menu-background: #ffffff;
+  --ion-menu-text-color: #000000;
+}
+
+ion-content {
+  --background: #ffffff;
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+}
+
+ion-item {
+  --background: #ffffff;
+  --ion-item-background: #ffffff;
+  --ion-item-text-color: #000000;
+}
+
+/* Adicione estilos específicos para botões, inputs e outros elementos conforme necessário */
+ion-button, ion-input, ion-item {
+  --background: #ffffff;
+  --color: #000000;
+}
+
+ion-card {
+  --background: #ffffff;
+  --ion-card-background: #ffffff;
+  --ion-card-text-color: #000000;
+}
+
+ion-card-content {
+  --background: #ffffff;
+  --color: #000000;
+}
+
+ion-menu.md ion-content {
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+}
+
+ion-menu.md ion-list {
+  padding: 20px 0;
+}
+
+ion-menu.md ion-note {
+  margin-bottom: 30px;
+}
+
+ion-menu.md ion-list-header,
+ion-menu.md ion-note {
+  padding-left: 10px;
+}
+
+ion-menu.md ion-list#inbox-list {
+  border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
+}
+
+ion-menu.md ion-list#inbox-list ion-list-header {
+  font-size: 22px;
+  font-weight: 600;
+
+  min-height: 20px;
+}
+
+ion-menu.md ion-list#labels-list ion-list-header {
+  font-size: 16px;
+
+  margin-bottom: 18px;
+
+  color: #757575;
+
+  min-height: 26px;
+}
+
+ion-menu.md ion-item {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  border-radius: 4px;
+}
+
+ion-menu.md ion-item.selected {
+  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+}
+
+ion-menu.md ion-item.selected ion-icon {
+  color: var(--ion-color-primary);
+}
+
+ion-menu.md ion-item ion-icon {
+  color: #616e7e;
+}
+
+ion-menu.md ion-item ion-label {
+  font-weight: 500;
+}
+
+ion-menu.ios ion-content {
+  --padding-bottom: 20px;
+}
+
+ion-menu.ios ion-list {
+  padding: 20px 0 0 0;
+}
+
+ion-menu.ios ion-note {
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+ion-menu.ios ion-item {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --min-height: 50px;
+}
+
+ion-menu.ios ion-item.selected ion-icon {
+  color: var(--ion-color-primary);
+}
+
+ion-menu.ios ion-item ion-icon {
+  font-size: 24px;
+  color: #73849a;
+}
+
+ion-menu.ios ion-list#labels-list ion-list-header {
+  margin-bottom: 8px;
+}
+
+ion-menu.ios ion-list-header,
+ion-menu.ios ion-note {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+ion-menu.ios ion-note {
+  margin-bottom: 8px;
+}
+
+ion-note {
+  display: inline-block;
+  font-size: 16px;
+
+  color: var(--ion-color-medium-shade);
+}
+
+ion-item.selected {
+  --color: var(--ion-color-primary);
+}
+
+.titulomenu{
+  font-family: "Real Head Web W03 Regular";
+}
+
+
+ion-menu {
+  ion-list {
+    ion-item {
+      display: flex;
+      align-items: center;
+      --inner-padding-start: 0; // Isso ajusta o padding interno do item do menu do Ionic
+      --padding-start: 0; // Isso remove o padding padrão à esquerda dos itens do menu do Ionic
+
+      ion-icon,
+      .custom-icon {
+        flex-shrink: 0; // Isso impede que os ícones encolham quando o espaço é limitado
+        width: 47px; // ou o tamanho que corresponde aos outros ícones
+        height: 25px; // mantenha a mesma proporção que a largura
+        margin-right: 10px; // Espaço entre o ícone e o texto
+      }
+
+      .custom-icon{
+      width: 47px;
+      height: auto;
+      }
+      ion-label {
+        // Não é necessário o margin-left se você ajustou o --inner-padding-start
+        // Se você ainda precisa de ajuste, pode ser algo como:
+        margin-left: 0; // Ajuste conforme necessário, mas tente manter em 0 ou outro valor que alinhe corretamente com o design
+      }
+    }
+  }
+}
